@@ -6,21 +6,25 @@ var router = express.Router();
 
 router.get('/', function(req,res) {
   //res.send('hello world');
-  res.sendFile(path.join( __dirname,'../index.html'));
+  res.render('pages/index');
 })
 
 // route about  page
 
 router.get('/about', function(req,res) {
-  res.send('the about page');
+    res.render('pages/about');
 })
 
 
 // route contact page
 
-router.get('/contact');
+router.get('/contact', function(req, res){
+    res.render('pages/contact');
+});
 
-router.post('/contact');
+router.post('/contact', function(req, res){
+    
+});
 
 
 module.exports = router;
