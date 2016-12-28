@@ -5,7 +5,8 @@ var router = express.Router();
 // route home page
 
 router.get('/', function(req,res) {
-  res.send('hello world');
+  //res.send('hello world');
+  res.sendFile(path.join( __dirname,'../index.html'));
 })
 
 // route about  page
