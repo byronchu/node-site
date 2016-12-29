@@ -1,16 +1,19 @@
-<%- contentFor('hero') %>
-<section class ="hero">
-  <div class="hero-content">
-    <h2>Welcome to my Node site</h2>
-    <p>leaning to node.js</p>
 
-  <a href="/" class=" btn btn-lg btn-primary">Get started</a>
-  <a href="/contact" class=" btn btn-lg btn-primary">contact</a>
-  </div>
-</section>
 
-<main>
-  <div class="container">
-    <div class="jumbotron text-center">Home page
+
+
+  <%- contentFor('hero') %>
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Welcome to the Site!</h2>
+      <p>The best place to be</p>
+
+      <a href="/" class="btn btn-lg btn-primary">Get Started</a>
+      <a href="/contact" class="btn btn-lg btn-primary">Contact</a>
     </div>
+  </section>
+
+  <%- contentFor('body') %>
+  <div class="jumbotron text-center">
+    Home Page
   </div>
