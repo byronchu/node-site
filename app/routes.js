@@ -14,10 +14,12 @@ router.get('/', function(req,res) {
 router.get('/about', function(req,res) {
 
   var users = [
-    { name: 'Holly', email: 'holly@test.com', avatar: 'http://placebear.com/350/350'},
-    { name: 'Chris', email: 'chris@test.com', avatar: 'http://placebear.com/300/300'},
-    { name: 'Pat', email: 'nick@test.com', avatar: 'http://placebear.com/900/900'},
-    { name: 'George', email: 'george@test.com', avatar: 'http://placebear.com/400/400'}
+    { name: 'Holly', email: 'holly@test.com', avatar: 'http://loremflickr.com/350/350'},
+    { name: 'Dave', email: 'Dave@test.com', avatar: 'http://place-hoff.com/300/300'},
+    { name: 'Steven', email: 'steve@test.com', avatar: 'http://stevensegallery.com/900/900'},
+
+    { name: 'Bob', email: 'bob@test.com', avatar: 'http://placebeard.it/400/400'},
+    { name: 'Nick', email: 'nick@test.com', avatar: 'http://placecage.com/400/400'}
   ];
 
 
@@ -32,6 +34,9 @@ router.get('/contact', function(req, res){
 });
 
 router.post('/contact', function(req, res){
+
+  console.log(req.body.message);
+  res.send('Thanks for contacting us,' + req.body.name +' we will respond shortly');
 
 });
 
